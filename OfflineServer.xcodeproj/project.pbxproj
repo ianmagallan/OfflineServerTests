@@ -7,12 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		514DD9A925968C8800C36DBC /* RegistrationHelperProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514FF632259670C60066A248 /* RegistrationHelperProtocol.swift */; };
+		514DD9AD25968C9F00C36DBC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514FF62125966FF10066A248 /* User.swift */; };
+		514DD9B125968CA200C36DBC /* NetworkEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514FF62A259670540066A248 /* NetworkEnum.swift */; };
+		514DD9B525968CA600C36DBC /* NetworkLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514FF61B25966E750066A248 /* NetworkLayer.swift */; };
+		514DD9BE25968ED800C36DBC /* DummyEncryptionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514DD9BD25968ED800C36DBC /* DummyEncryptionHelper.swift */; };
+		514DD9C725968F0B00C36DBC /* StubSuccessNetworkLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514DD9C625968F0B00C36DBC /* StubSuccessNetworkLayer.swift */; };
+		514DD9CF2596A9DD00C36DBC /* StubUsernameExistNetworkLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514DD9CE2596A9DD00C36DBC /* StubUsernameExistNetworkLayer.swift */; };
 		514FF5DD25966CF90066A248 /* OfflineServerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514FF5DC25966CF90066A248 /* OfflineServerApp.swift */; };
 		514FF5DF25966CF90066A248 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514FF5DE25966CF90066A248 /* ContentView.swift */; };
 		514FF5E125966CFA0066A248 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 514FF5E025966CFA0066A248 /* Assets.xcassets */; };
 		514FF5E425966CFA0066A248 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 514FF5E325966CFA0066A248 /* Preview Assets.xcassets */; };
 		514FF5EF25966CFA0066A248 /* OfflineServerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514FF5EE25966CFA0066A248 /* OfflineServerTests.swift */; };
 		514FF5FA25966CFB0066A248 /* OfflineServerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514FF5F925966CFB0066A248 /* OfflineServerUITests.swift */; };
+		514FF60C25966D9F0066A248 /* EncryptionHelperProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514FF60B25966D9F0066A248 /* EncryptionHelperProtocol.swift */; };
+		514FF61225966E0B0066A248 /* EncryptionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514FF61125966E0B0066A248 /* EncryptionHelper.swift */; };
+		514FF61725966E4C0066A248 /* NetworkLayerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514FF61625966E4C0066A248 /* NetworkLayerProtocol.swift */; };
+		514FF61C25966E750066A248 /* NetworkLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514FF61B25966E750066A248 /* NetworkLayer.swift */; };
+		514FF62225966FF10066A248 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514FF62125966FF10066A248 /* User.swift */; };
+		514FF62B259670540066A248 /* NetworkEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514FF62A259670540066A248 /* NetworkEnum.swift */; };
+		514FF633259670C60066A248 /* RegistrationHelperProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514FF632259670C60066A248 /* RegistrationHelperProtocol.swift */; };
+		514FF638259671670066A248 /* RegistrationRequestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514FF637259671670066A248 /* RegistrationRequestHelper.swift */; };
+		514FF63E259687EF0066A248 /* MockNetworkLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514FF63D259687EF0066A248 /* MockNetworkLayer.swift */; };
+		514FF645259688DF0066A248 /* NetworkLayerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514FF61625966E4C0066A248 /* NetworkLayerProtocol.swift */; };
+		514FF64A259689930066A248 /* MockEncryptionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514FF649259689930066A248 /* MockEncryptionHelper.swift */; };
+		514FF64E259689AC0066A248 /* EncryptionHelperProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514FF60B25966D9F0066A248 /* EncryptionHelperProtocol.swift */; };
+		514FF65225968A800066A248 /* RegistrationRequestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514FF637259671670066A248 /* RegistrationRequestHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +53,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		514DD9BD25968ED800C36DBC /* DummyEncryptionHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyEncryptionHelper.swift; sourceTree = "<group>"; };
+		514DD9C625968F0B00C36DBC /* StubSuccessNetworkLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubSuccessNetworkLayer.swift; sourceTree = "<group>"; };
+		514DD9CE2596A9DD00C36DBC /* StubUsernameExistNetworkLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubUsernameExistNetworkLayer.swift; sourceTree = "<group>"; };
 		514FF5D925966CF90066A248 /* OfflineServer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OfflineServer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		514FF5DC25966CF90066A248 /* OfflineServerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfflineServerApp.swift; sourceTree = "<group>"; };
 		514FF5DE25966CF90066A248 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -45,6 +68,16 @@
 		514FF5F525966CFB0066A248 /* OfflineServerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OfflineServerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		514FF5F925966CFB0066A248 /* OfflineServerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfflineServerUITests.swift; sourceTree = "<group>"; };
 		514FF5FB25966CFB0066A248 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		514FF60B25966D9F0066A248 /* EncryptionHelperProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncryptionHelperProtocol.swift; sourceTree = "<group>"; };
+		514FF61125966E0B0066A248 /* EncryptionHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncryptionHelper.swift; sourceTree = "<group>"; };
+		514FF61625966E4C0066A248 /* NetworkLayerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLayerProtocol.swift; sourceTree = "<group>"; };
+		514FF61B25966E750066A248 /* NetworkLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLayer.swift; sourceTree = "<group>"; };
+		514FF62125966FF10066A248 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		514FF62A259670540066A248 /* NetworkEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkEnum.swift; sourceTree = "<group>"; };
+		514FF632259670C60066A248 /* RegistrationHelperProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationHelperProtocol.swift; sourceTree = "<group>"; };
+		514FF637259671670066A248 /* RegistrationRequestHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationRequestHelper.swift; sourceTree = "<group>"; };
+		514FF63D259687EF0066A248 /* MockNetworkLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkLayer.swift; sourceTree = "<group>"; };
+		514FF649259689930066A248 /* MockEncryptionHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockEncryptionHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +105,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		514DD9B925968DE000C36DBC /* Dummy */ = {
+			isa = PBXGroup;
+			children = (
+				514DD9BD25968ED800C36DBC /* DummyEncryptionHelper.swift */,
+			);
+			path = Dummy;
+			sourceTree = "<group>";
+		};
+		514DD9C525968EFA00C36DBC /* Stub */ = {
+			isa = PBXGroup;
+			children = (
+				514DD9C625968F0B00C36DBC /* StubSuccessNetworkLayer.swift */,
+				514DD9CE2596A9DD00C36DBC /* StubUsernameExistNetworkLayer.swift */,
+			);
+			path = Stub;
+			sourceTree = "<group>";
+		};
 		514FF5D025966CF90066A248 = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +145,10 @@
 		514FF5DB25966CF90066A248 /* OfflineServer */ = {
 			isa = PBXGroup;
 			children = (
+				514FF629259670440066A248 /* Enums */,
+				514FF62025966FE50066A248 /* Model */,
+				514FF61025966DFA0066A248 /* Helpers */,
+				514FF60A25966D850066A248 /* Protocols */,
 				514FF5DC25966CF90066A248 /* OfflineServerApp.swift */,
 				514FF5DE25966CF90066A248 /* ContentView.swift */,
 				514FF5E025966CFA0066A248 /* Assets.xcassets */,
@@ -115,6 +169,9 @@
 		514FF5ED25966CFA0066A248 /* OfflineServerTests */ = {
 			isa = PBXGroup;
 			children = (
+				514DD9C525968EFA00C36DBC /* Stub */,
+				514DD9B925968DE000C36DBC /* Dummy */,
+				514FF63C259687DF0066A248 /* Mock */,
 				514FF5EE25966CFA0066A248 /* OfflineServerTests.swift */,
 				514FF5F025966CFA0066A248 /* Info.plist */,
 			);
@@ -128,6 +185,51 @@
 				514FF5FB25966CFB0066A248 /* Info.plist */,
 			);
 			path = OfflineServerUITests;
+			sourceTree = "<group>";
+		};
+		514FF60A25966D850066A248 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				514FF60B25966D9F0066A248 /* EncryptionHelperProtocol.swift */,
+				514FF61625966E4C0066A248 /* NetworkLayerProtocol.swift */,
+				514FF632259670C60066A248 /* RegistrationHelperProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		514FF61025966DFA0066A248 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				514FF61125966E0B0066A248 /* EncryptionHelper.swift */,
+				514FF61B25966E750066A248 /* NetworkLayer.swift */,
+				514FF637259671670066A248 /* RegistrationRequestHelper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		514FF62025966FE50066A248 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				514FF62125966FF10066A248 /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		514FF629259670440066A248 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				514FF62A259670540066A248 /* NetworkEnum.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		514FF63C259687DF0066A248 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				514FF63D259687EF0066A248 /* MockNetworkLayer.swift */,
+				514FF649259689930066A248 /* MockEncryptionHelper.swift */,
+			);
+			path = Mock;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +361,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				514FF61C25966E750066A248 /* NetworkLayer.swift in Sources */,
+				514FF61725966E4C0066A248 /* NetworkLayerProtocol.swift in Sources */,
+				514FF638259671670066A248 /* RegistrationRequestHelper.swift in Sources */,
+				514FF61225966E0B0066A248 /* EncryptionHelper.swift in Sources */,
+				514FF62B259670540066A248 /* NetworkEnum.swift in Sources */,
 				514FF5DF25966CF90066A248 /* ContentView.swift in Sources */,
 				514FF5DD25966CF90066A248 /* OfflineServerApp.swift in Sources */,
+				514FF633259670C60066A248 /* RegistrationHelperProtocol.swift in Sources */,
+				514FF60C25966D9F0066A248 /* EncryptionHelperProtocol.swift in Sources */,
+				514FF62225966FF10066A248 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,6 +378,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				514FF645259688DF0066A248 /* NetworkLayerProtocol.swift in Sources */,
+				514FF63E259687EF0066A248 /* MockNetworkLayer.swift in Sources */,
+				514FF64E259689AC0066A248 /* EncryptionHelperProtocol.swift in Sources */,
+				514DD9A925968C8800C36DBC /* RegistrationHelperProtocol.swift in Sources */,
+				514DD9B125968CA200C36DBC /* NetworkEnum.swift in Sources */,
+				514DD9AD25968C9F00C36DBC /* User.swift in Sources */,
+				514DD9C725968F0B00C36DBC /* StubSuccessNetworkLayer.swift in Sources */,
+				514FF64A259689930066A248 /* MockEncryptionHelper.swift in Sources */,
+				514FF65225968A800066A248 /* RegistrationRequestHelper.swift in Sources */,
+				514DD9B525968CA600C36DBC /* NetworkLayer.swift in Sources */,
+				514DD9BE25968ED800C36DBC /* DummyEncryptionHelper.swift in Sources */,
+				514DD9CF2596A9DD00C36DBC /* StubUsernameExistNetworkLayer.swift in Sources */,
 				514FF5EF25966CFA0066A248 /* OfflineServerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
