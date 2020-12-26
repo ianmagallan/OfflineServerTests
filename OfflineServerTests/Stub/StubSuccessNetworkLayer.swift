@@ -6,8 +6,9 @@
 //
 
 import Foundation
+import Combine
 class StubSuccessNetworkLayer: NetoworkLayerProtocol {
-    func post(_ url: URL, parameters: Data, completion: (Result<Data, Error>) -> Void) {
+    func post<T: Decodable>(_ url: URL, parameters: Data) -> AnyPublisher<T, NetworkError> {
         let responseJson = """
             {
                 "user_id": 1001,
@@ -18,6 +19,19 @@ class StubSuccessNetworkLayer: NetoworkLayerProtocol {
         """
         
         let jsonData = Data(responseJson.utf8)
-        completion(.success(jsonData))
+        
+        return Just(jsonData)
+            .tryMap { data in
+                let decoder = JSONDecoder()
+                decoder.keyDecodingStrategy = .convertFromSnakeCase
+                
+                if let decodedData = try? decoder.decode(T.self, from: data) {
+                    return decodedData
+                }
+                
+                throw NetworkError.decodeFailed
+            }
+            .mapError { $0 as! NetworkError }
+            .eraseToAnyPublisher()
     }
 }

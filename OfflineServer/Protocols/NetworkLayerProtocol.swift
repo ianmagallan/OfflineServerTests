@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Combine
 protocol NetoworkLayerProtocol {
-    func post(_ url: URL, parameters: Data, completion: (Result<Data, Error>) -> Void)
+    func post<T: Decodable>(_ url: URL, parameters: Data) -> AnyPublisher<T, NetworkError>
 }

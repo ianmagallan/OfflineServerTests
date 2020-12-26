@@ -6,8 +6,11 @@
 //
 
 import Foundation
+import Combine
 class NetworkLayer: NetoworkLayerProtocol {
-    func post(_ url: URL, parameters: Data, completion: (Result<Data, Error>) -> Void) {
+    func post<T>(_ url: URL, parameters: Data) -> AnyPublisher<T, NetworkError> {
         // Something
+        return Fail(error: NetworkError.unexpectedResponse)
+            .eraseToAnyPublisher()
     }
 }

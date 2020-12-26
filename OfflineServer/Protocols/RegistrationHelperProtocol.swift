@@ -9,5 +9,5 @@ import Foundation
 protocol RegistrationHelperProtocol {
     func register(_ username: String,
                   password: String,
-                  completion: (Result<User, RegistrationRequestError>) -> Void)
+                  completion: @escaping (Result<User, NetworkError>) -> Void)
 }

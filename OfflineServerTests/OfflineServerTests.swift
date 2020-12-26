@@ -66,7 +66,7 @@ class OfflineServerTests: XCTestCase {
         let exp = expectation(description: "Post request completed")
         
         /* Act */
-        var postResult: Result<User, RegistrationRequestError>!
+        var postResult: Result<User, NetworkError>!
         
         let requestHelper = RegistrationRequestHelper(networkLayer: stubNetworkLayer, encryptionHelper: dummyEncryption)
         requestHelper.register("john", password: "dummy-password") { (result) in
@@ -94,7 +94,7 @@ class OfflineServerTests: XCTestCase {
         
         let exp = expectation(description: "Post request completed")
         
-        var postResult: Result<User, RegistrationRequestError>!
+        var postResult: Result<User, NetworkError>!
         
         let requestHelper = RegistrationRequestHelper(networkLayer: stubNetworkLayer, encryptionHelper: dummyEncryptionHelper)
         requestHelper.register("dummy-username", password: "dummy-password") { (result) in
@@ -104,12 +104,12 @@ class OfflineServerTests: XCTestCase {
         waitForExpectations(timeout: 5.0, handler: nil)
         
         /* Assert */
-        var actualError: RegistrationRequestError?
+        var actualError: NetworkError?
         XCTAssertThrowsError(try postResult.get()) { (error) in
-            actualError = error as? RegistrationRequestError
+            actualError = error as? NetworkError
         }
         
-        let expectedError = RegistrationRequestError.usernameAlreadyExists
+        let expectedError = NetworkError.usernameAlreadyExists
         XCTAssertEqual(expectedError, actualError)
     }
 }

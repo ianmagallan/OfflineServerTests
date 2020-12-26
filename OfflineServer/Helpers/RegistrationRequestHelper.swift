@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Combine
 class RegistrationRequestHelper: RegistrationHelperProtocol {
     
     private let networkLayer: NetoworkLayerProtocol
@@ -16,7 +17,7 @@ class RegistrationRequestHelper: RegistrationHelperProtocol {
         self.encryptionHelper = encryptionHelper
     }
     
-    func register(_ username: String, password: String, completion: (Result<User, RegistrationRequestError>) -> Void) {
+    func register(_ username: String, password: String, completion: @escaping (Result<User, NetworkError>) -> Void) {
         let url = URL(string: "https://some-api-call.com")!
         let encryptedPassword = encryptionHelper.encrypt(password)
         
@@ -24,31 +25,20 @@ class RegistrationRequestHelper: RegistrationHelperProtocol {
         let encoder = JSONEncoder()
         let requestData = try! encoder.encode(parameters)
         
-        networkLayer.post(url, parameters: requestData) { (result) in
-            switch result {
-            case .success(let jsonData):
-                let decoder = JSONDecoder()
-                decoder.keyDecodingStrategy = .convertFromSnakeCase
-                
-                if let user = try? decoder.decode(User.self, from: jsonData) {
-                    completion(.success(user))
-                    return
-                } else if let error = try? JSONSerialization.jsonObject(with: jsonData) as? [String: Any] {
-                    if let errorCode = error["error_code"] as? String {
-                        switch errorCode {
-                        case "E001":
-                            completion(.failure(.usernameAlreadyExists))
-                            return
-                        default:
-                            break
-                        }
-                    }
+        let getUser: AnyPublisher<User, NetworkError> = networkLayer.post(url, parameters: requestData)
+        
+        getUser
+            .sink(receiveCompletion: { receiveCompletion in
+                switch receiveCompletion{
+                case .finished:
+                    print("Finished")
+                case .failure(let error):
+                    print("Error \(error)")
+                    completion(.failure(error))
                 }
-                
-                completion(.failure(.unexpectedResponse))
-            case .failure:
-                completion(.failure(.requestFailed))
-            }
-        }
+            },
+            receiveValue: { user in
+                completion(.success(user))
+            })
     }
 }

@@ -6,8 +6,9 @@
 //
 
 import Foundation
-enum RegistrationRequestError: Error, Equatable {
+enum NetworkError: Error, Equatable {
     case usernameAlreadyExists
     case unexpectedResponse
     case requestFailed
+    case decodeFailed
 }
